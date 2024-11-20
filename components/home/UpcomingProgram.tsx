@@ -31,7 +31,7 @@ export default function UpcomingProgram({
   return (
     <Card className="group hover:shadow-2xl transition-shadow duration-300">
       <div className="flex flex-col md:flex-row gap-6">
-        <div className="relative w-full md:w-48 h-48 overflow-hidden rounded-lg">
+        <div className="relative w-full md:w-96 md:h-96 h-48 overflow-hidden rounded-lg">
           <Image
             src={image}
             alt={title}

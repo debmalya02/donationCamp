@@ -19,7 +19,7 @@ const upcomingPrograms = [
   {
     title: 'Food Distribution Drive',
     date: 'October 25, 2023',
-    image: '/programs/food-drive.jpg',
+    image: '/food-drive.jpg',
     description: 'Join us in our mission to provide meals to 1000+ families in need.',
     goalAmount: 500000,
     raisedAmount: 350000,
@@ -29,7 +29,7 @@ const upcomingPrograms = [
   {
     title: 'Education Kit Distribution',
     date: 'November 1, 2023',
-    image: '/programs/education.jpg',
+    image: '/education.jpg',
     description: 'Help us provide essential school supplies to underprivileged children.',
     goalAmount: 300000,
     raisedAmount: 150000,

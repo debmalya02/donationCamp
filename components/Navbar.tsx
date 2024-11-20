@@ -26,6 +26,7 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
+    { href: '/events', label: 'Events' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
   ];
@@ -42,7 +43,7 @@ export default function Navbar() {
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="text-2xl font-bold text-purple-700">
+            <Link href="/" className="text-2xl font-bold text-purple-600">
               Donation Club
             </Link>
             
@@ -67,14 +68,14 @@ export default function Navbar() {
               <div className="flex items-center space-x-4">
                 <Link 
                   href="/donate" 
-                  className={`btn-primary ${isActive('/donate') ? 'ring-2 ring-purple-500 ring-offset-2' : ''}`}
+                  className={`btn-primary ${isActive('/donate') ? 'ring-2 ring-white ring-offset-2' : ''}`}
                 >
                   Donate Now
                 </Link>
 
                 {isAuthenticated ? (
                   <Menu as="div" className="relative">
-                    <Menu.Button className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-purple-500 hover:border-purple-600 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
+                    <Menu.Button className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-white hover:border-white/80 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2">
                       <Image
                         src="/profile-placeholder.jpg"
                         alt="Profile"
@@ -123,8 +124,8 @@ export default function Navbar() {
                   <Link 
                     href="/auth" 
                     className={`px-6 py-2 rounded-full border-2 border-purple-600 text-purple-600 
-                      hover:bg-purple-600 hover:text-white transition-all duration-300 
-                      ${isActive('/auth') ? 'bg-purple-600 text-white' : ''}`}
+                      hover:bg-white hover:text-purple-600 transition-all duration-300 
+                      ${isActive('/auth') ? 'bg-white text-purple-600' : ''}`}
                   >
                     Sign In
                   </Link>
@@ -134,10 +135,10 @@ export default function Navbar() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 rounded-lg hover:bg-purple-50 transition-colors"
+              className="md:hidden p-2 rounded-lg text-purple-600 hover:bg-white/10 transition-colors"
               onClick={() => setIsMenuOpen(true)}
             >
-              <Bars3Icon className="w-6 h-6 text-purple-600" />
+              <Bars3Icon className="w-6 h-6" />
             </button>
           </div>
         </div>
